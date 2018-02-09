@@ -71,9 +71,9 @@ $(window).ready(function () {
     , heading: "Lord of the Rings"
     , sauron: {
       name: "Sauron"
-      , healthPoints: 213
-      , attackPower: 8
-      , counterAttackPower: 22
+      , healthPoints: 639
+      , attackPower: 24
+      , counterAttackPower: 66
       , healthId: "avatar-one-health"
       , imageLocation: "assets/images/sauron.jpg"
       , divId: "avatar-one"
@@ -81,9 +81,9 @@ $(window).ready(function () {
     }
     , gandalf: {
       name: "Gandalf"
-      , healthPoints: 187
-      , attackPower: 9
-      , counterAttackPower: 19
+      , healthPoints: 561
+      , attackPower: 27
+      , counterAttackPower: 59
       , healthId: "avatar-two-health"
       , imageLocation: "assets/images/gandalf.jpg"
       , divId: "avatar-two"
@@ -91,9 +91,9 @@ $(window).ready(function () {
     }
     , frodo: {
       name: "Frodo Baggins"
-      , healthPoints: 230
-      , attackPower: 6
-      , counterAttackPower: 18
+      , healthPoints: 690
+      , attackPower: 22
+      , counterAttackPower: 55
       , healthId: "avatar-three-health"
       , imageLocation: "assets/images/frodo.jpg"
       , divId: "avatar-three"
@@ -101,9 +101,9 @@ $(window).ready(function () {
     }
     , gollum: {
       name: "Gollum"
-      , healthPoints: 155
-      , attackPower: 11
-      , counterAttackPower: 26
+      , healthPoints: 465
+      , attackPower: 33
+      , counterAttackPower: 84
       , healthId: "avatar-four-health"
       , imageLocation: "assets/images/gollum.jpg"
       , divId: "avatar-four"
@@ -119,9 +119,9 @@ $(window).ready(function () {
     , heading: "the Matrix"
     , smith: {
       name: "Agent Smith"
-      , healthPoints: 213
-      , attackPower: 8
-      , counterAttackPower: 22
+      , healthPoints: 276
+      , attackPower: 11
+      , counterAttackPower: 29
       , healthId: "avatar-one-health"
       , imageLocation: "assets/images/smith.jpg"
       , divId: "avatar-one"
@@ -129,9 +129,9 @@ $(window).ready(function () {
     }
     , morpheus: {
       name: "Morpheus"
-      , healthPoints: 187
-      , attackPower: 9
-      , counterAttackPower: 19
+      , healthPoints: 228
+      , attackPower: 16
+      , counterAttackPower: 26
       , healthId: "avatar-two-health"
       , imageLocation: "assets/images/morpheus.jpg"
       , divId: "avatar-two"
@@ -139,9 +139,9 @@ $(window).ready(function () {
     }
     , neo: {
       name: "Neo"
-      , healthPoints: 230
-      , attackPower: 6
-      , counterAttackPower: 18
+      , healthPoints: 240
+      , attackPower: 15
+      , counterAttackPower: 30
       , healthId: "avatar-three-health"
       , imageLocation: "assets/images/neo.jpg"
       , divId: "avatar-three"
@@ -149,9 +149,9 @@ $(window).ready(function () {
     }
     , trinity: {
       name: "Trinity"
-      , healthPoints: 155
-      , attackPower: 11
-      , counterAttackPower: 26
+      , healthPoints: 188
+      , attackPower: 18
+      , counterAttackPower: 40
       , healthId: "avatar-four-health"
       , imageLocation: "assets/images/trinity.jpg"
       , divId: "avatar-four"
@@ -167,9 +167,9 @@ $(window).ready(function () {
     , heading: "Game of Thrones"
     , daenerys: {
       name: "Daenerys"
-      , healthPoints: 213
-      , attackPower: 8
-      , counterAttackPower: 22
+      , healthPoints: 844
+      , attackPower: 29
+      , counterAttackPower: 88
       , healthId: "avatar-one-health"
       , imageLocation: "assets/images/daenerys.jpeg"
       , divId: "avatar-one"
@@ -177,9 +177,9 @@ $(window).ready(function () {
     }
     , tyrion: {
       name: "Tyrion"
-      , healthPoints: 187
-      , attackPower: 9
-      , counterAttackPower: 19
+      , healthPoints: 748
+      , attackPower: 36
+      , counterAttackPower: 76
       , healthId: "avatar-two-health"
       , imageLocation: "assets/images/tyrion.jpg"
       , divId: "avatar-two"
@@ -187,9 +187,9 @@ $(window).ready(function () {
     }
     , snow: {
       name: "Jon"
-      , healthPoints: 230
-      , attackPower: 6
-      , counterAttackPower: 18
+      , healthPoints: 920
+      , attackPower: 26
+      , counterAttackPower: 72
       , healthId: "avatar-three-health"
       , imageLocation: "assets/images/snow.jpg"
       , divId: "avatar-three"
@@ -197,9 +197,9 @@ $(window).ready(function () {
     }
     , hodor: {
       name: "Hodor"
-      , healthPoints: 155
-      , attackPower: 11
-      , counterAttackPower: 26
+      , healthPoints: 620
+      , attackPower: 44
+      , counterAttackPower: 104
       , healthId: "avatar-four-health"
       , imageLocation: "assets/images/hodor.jpg"
       , divId: "avatar-four"
