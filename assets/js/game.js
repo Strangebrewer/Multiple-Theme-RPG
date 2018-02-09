@@ -15,7 +15,6 @@ $(window).ready(function () {
   var playerTwo;
 
   // THEME OBJECTS
-
   // STAR WARS
   var starWars = {
     songs: ["vader-song", "obiwan-song", "luke-song", "porg-song"]
@@ -207,7 +206,9 @@ $(window).ready(function () {
       , defeatLocation: "7 / 5 / auto / auto"
     }
   } // end GAME OF THRONES
+  // end THEME OBJECTS
 
+  // FADE Functions
   function fadeOut(p1) {
     $(p1).css("animation", "fadeout 1.2s");
     $(p1).css("opacity", "0");
@@ -222,7 +223,9 @@ $(window).ready(function () {
     $(p1).css("animation", "fadein3 1.4s");
     $(p1).css("opacity", ".7");
   }
+  // end FADE Functions
 
+  // CHOOSE CHARACTER Functions
   function moveEnemies(p1, p2, p3) {
     fadeOut(p1);
     fadeOut(p2);
@@ -281,7 +284,9 @@ $(window).ready(function () {
     defenderFlag = false;
     $("#attack-button").attr("disabled", false);
   }
+  // end CHOOSE CHARACTER Functions
 
+  // CHOOSE THEME Functions
   function themeChoice(p1, p2) {
     fadeOut(".choose-theme-heading");
     fadeOut("#button-array");
@@ -325,16 +330,7 @@ $(window).ready(function () {
     $("#avatar-four-image").attr("src", p4.imageLocation);
   }
 
-  function colorChanges(p1, p2, p3, p4) {
-    setTimeout(function () {
-      $("#main-heading").css("font-family", p1);
-      $("#main-heading").css("color", p2);
-      $("#main-heading").css("text-shadow", "0 0 30px " + p3);
-      $(".avatar-box img").css("border", p4);
-    }, 2000);
-  }
-
-  // CHOOSE THEME  
+  // CHOOSE THEME Buttons
   $("#theme-btn-one").on("click", function () {
     assignAvatars(starWars.vader, starWars.obiwan, starWars.luke, starWars.porg, starWars.songs);
     themeChoice(starWars.heading, starWars.backgroundLocation);
@@ -355,11 +351,11 @@ $(window).ready(function () {
   $("#theme-btn-four").on("click", function () {
     assignAvatars(got.daenerys, got.tyrion, got.snow, got.hodor, got.songs);
     themeChoice(got.heading, got.backgroundLocation);
-    colorChanges(got.h1Typeface, "#757575", "#000","6px solid #5d00cf");
+    colorChanges(got.h1Typeface, "#757575", "#000", "6px solid #5d00cf");
   });
-  // end CHOOSE THEME
+  // end CHOOSE THEME Buttons
 
-  // CHOOSE AVATARS
+  // CHOOSE AVATAR Buttons
   $("#player-one").on("click", function () {
     if (countFlag > 0 && playerOneFlag && defenderFlag) {
       chooseDefender("#avatar-one");
@@ -423,8 +419,9 @@ $(window).ready(function () {
     }
     countFlag++;
   });
+  // end CHOOSE AVATAR Buttons
 
-
+  // ATTACK BUTTON Variables
   var playerOne;
   var playerTwo;
   var undefeatedEnemies = 3
@@ -432,6 +429,7 @@ $(window).ready(function () {
   var currentOneHealth;
   var currentTwoHealth;
 
+  // ATTACK BUTTON Functions
   function checkOneHealth() {
     if (currentOneHealth <= 0) {
       $("#" + playerOne.healthId).text("Health: 0");
@@ -531,6 +529,7 @@ $(window).ready(function () {
       );
     }
   }
+  // end ATTACK BUTTON Functions
 
   // ATTACK BUTTON
   $("#attack-button").on("click", function () {
@@ -544,7 +543,9 @@ $(window).ready(function () {
     checkOneHealth();
     attacks++;
   });
+  // end ATTACK BUTTON
 
+  // RESET & START OVER BUTTONS
   $("#reset-button").on("click", function () {
     window.location.reload();
   })
@@ -552,5 +553,5 @@ $(window).ready(function () {
   $("#play-again-button").on("click", function () {
     window.location.reload();
   })
-
+  // end RESET & START OVER BUTTONS
 });
