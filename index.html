@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RPG</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Orbitron" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="grid big-container">
+
+    <div class="header">
+      <header>
+        <h1 id="main-heading">RPG</h1>
+      </header>
+    </div>
+
+    <div class="grid content-container">
+
+
+      <h2 class="choose-theme-heading">Choose A Theme</h2>
+      <div id="button-array">
+        <button class="theme-btn" id="theme-btn-one">
+          <img src="assets/images/sw-theme-icon.jpg" alt="star wars button">
+        </button>
+        <button class="theme-btn" id="theme-btn-two">
+          <img src="assets/images/lotr-theme-icon.jpg" alt="lord of the rings button">
+        </button>
+        <button class="theme-btn" id="theme-btn-three">
+          <img src="assets/images/matrix-theme-icon.jpg" alt="the matrix button">
+        </button>
+        <button class="theme-btn" id="theme-btn-four">
+          <img src="assets/images/got-theme-icon.png" alt="game of thrones button">
+        </button>
+      </div>
+
+      <button id="attack-button">Attack!</button>
+      <button id="reset-button">Restart</button>
+      <button id="play-again-button">Play Again</button>
+
+      <h2 class="hidden-beginning" id="choose-avatar-heading">Choose Your Character</h2>
+
+      <h5 id="your-character-label">Your Character</h5>
+      <h6 id="versus">vs.</h6>
+      <h5 id="defender-label">Defender</h5>
+
+      <p id="howard-cosell"></p>
+      <p id="howard-cosell-two"></p>
+
+      <h5 id="graveyard-label">Graveyard</h5>
+
+      <!-- all avatar boxes will get the class "avatar-box"  and an id of "avatar-one" (two, three, etc.) for moving it around. onClicks should be hooked to the button rather than the div because buttons can be disabled -->
+      <div class="avatar-box hidden-beginning" id="avatar-one">
+        <button class="avatar" id="player-one">
+          <h3 id="avatar-one-name"></h3>
+          <img id="avatar-one-image" src="">
+          <h4 id="avatar-one-health"></h4>
+        </button>
+      </div>
+
+      <div class="avatar-box hidden-beginning" id="avatar-two">
+        <button class="avatar" id="player-two">
+          <h3 id="avatar-two-name"></h3>
+          <img id="avatar-two-image" src="">
+          <h4 id="avatar-two-health"></h4>
+        </button>
+      </div>
+
+      <div class="avatar-box hidden-beginning" id="avatar-three">
+        <button class="avatar" id="player-three">
+          <h3 id="avatar-three-name"></h3>
+          <img id="avatar-three-image" src="">
+          <h4 id="avatar-three-health"></h4>
+        </button>
+      </div>
+
+      <div class="avatar-box hidden-beginning" id="avatar-four">
+        <button class="avatar" id="player-four">
+          <h3 id="avatar-four-name"></h3>
+          <img id="avatar-four-image" src="">
+          <h4 id="avatar-four-health"></h4>
+        </button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <footer>
+        <p>&#9400;Copyright 2018 Keith Allmon</p>
+      </footer>
+    </div>
+
+  </div>
+
+  <!-- Star Wars audio -->
+  <audio class="audio" id="vader-song" src="assets/audio/imperialMarch.mp3"></audio>
+  <audio class="audio" id="obiwan-song" src="assets/audio/rebelFleet.mp3"></audio>
+  <audio class="audio" id="luke-song" src="assets/audio/themeSong.mp3"></audio>
+  <audio class="audio" id="porg-song" src="assets/audio/cantinaSong.mp3"></audio>
+
+  <!-- Lord of the Rings audio -->
+  <audio class="audio" id="sauron-song" src="https://soundcloud.com/stevedgamecomposer/lotro-dark-places"></audio>
+  <audio class="audio" id="gandalf-song" src="https://soundcloud.com/ro3b-3alahwa/lord-of-the-rings-theme-song"></audio>
+  <audio class="audio" id="frodo-song" src="https://soundcloud.com/manuelduarte/may-it-be-enya-lord-of-the"></audio>
+  <audio class="audio" id="gollum-song" src="https://soundcloud.com/adam-admodum-ingenium/15-lindsey-stirling-lord-of"></audio>
+
+  <!-- The Matrix audio -->
+  <audio class="audio" id="smith-song" src="assets/audio/badBlood.m4a"></audio>
+  <audio class="audio" id="morpheus-song" src="assets/audio/primeAudioSoup.m4a"></audio>
+  <audio class="audio" id="neo-song" src="assets/audio/wakeUp.m4a"></audio>
+  <audio class="audio" id="trinity-song" src="assets/audio/rockIsDead.m4a"></audio>
+
+  <!-- Game of Thrones audio -->
+  <audio class="audio" id="daenerys-song" src="https://soundcloud.com/kaya-d-vatansever/ramin-djawadi-dance-of-dragons-blood-of-the-dragon-game-of-thrones-season-5-episode-9-ending"></audio>
+
+  <audio class="audio" id="tyrion-song" src="https://soundcloud.com/eugenia-juravel/ramin-djawadi-mhysa-game-of"></audio>
+
+  <audio class="audio" id="jon-snow-song" src="https://soundcloud.com/rossbugden/ice-and-fire-game-of-thrones"></audio>
+
+  <audio class="audio" id="hodor-song" src="https://soundcloud.com/game-of-thrones-songs/opening-theme-game-of-thrones"></audio>
+
+  </div>
+
+  <script src="assets/js/jquery-3.3.1.js"></script>
+  <script src="assets/js/game.js"></script>
+</body>
+
+</html>
