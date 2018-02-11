@@ -13,7 +13,11 @@ $(window).ready(function () {
   var thirdAvatar;
   var fourthAvatar;
   var playerOne;
-  var playerTwo;
+  var playerTwo;  
+  var undefeatedEnemies = 3
+  var attacks = 0;
+  var currentOneHealth;
+  var currentTwoHealth;
 
   // THEME OBJECTS
   // STAR WARS
@@ -364,6 +368,9 @@ $(window).ready(function () {
       currentTwoHealth = playerTwo.healthPoints;
       playerOneFlag = false;
       defenderMissing = false;
+      if (undefeatedEnemies === 1) {
+        fadeOut("#choose-avatar-heading");
+      }
     } else if (playerOneFlag && defenderFlag) {
       choosePlayerOne("#avatar-one", "#avatar-two", "#avatar-three", "#avatar-four");
       playerOne = firstAvatar;
@@ -381,6 +388,9 @@ $(window).ready(function () {
       currentTwoHealth = playerTwo.healthPoints;
       playerTwoFlag = false;
       defenderMissing = false;
+      if (undefeatedEnemies === 1) {
+        fadeOut("#choose-avatar-heading");
+      }
     } else if (playerTwoFlag && defenderFlag) {
       choosePlayerOne("#avatar-two", "#avatar-one", "#avatar-three", "#avatar-four");
       playerOne = secondAvatar;
@@ -398,6 +408,9 @@ $(window).ready(function () {
       currentTwoHealth = playerTwo.healthPoints;
       playerThreeFlag = false;
       defenderMissing = false;
+      if (undefeatedEnemies === 1) {
+        fadeOut("#choose-avatar-heading");
+      }
     } else if (playerThreeFlag && defenderFlag) {
       choosePlayerOne("#avatar-three", "#avatar-one", "#avatar-two", "#avatar-four");
       playerOne = thirdAvatar;
@@ -415,6 +428,9 @@ $(window).ready(function () {
       currentTwoHealth = playerTwo.healthPoints;
       playerFourFlag = false;
       defenderMissing = false;
+      if (undefeatedEnemies === 1) {
+        fadeOut("#choose-avatar-heading");
+      }
     } else if (playerFourFlag && defenderFlag) {
       choosePlayerOne("#avatar-four", "#avatar-one", "#avatar-two", "#avatar-three");
       playerOne = fourthAvatar;
@@ -425,14 +441,6 @@ $(window).ready(function () {
     }
   });
   // end CHOOSE AVATAR Buttons
-
-  // ATTACK BUTTON Variables
-  var playerOne;
-  var playerTwo;
-  var undefeatedEnemies = 3
-  var attacks = 0;
-  var currentOneHealth;
-  var currentTwoHealth;
 
   // ATTACK BUTTON Functions
   function checkOneHealth() {
@@ -489,8 +497,6 @@ $(window).ready(function () {
         $("#howard-cosell-two").text("");
       });
       if (currentTwoHealth <= 0 && undefeatedEnemies === 0) {
-        $("#choose-avatar-heading").css("animation", "fadeout2 1.2s");
-        $("#choose-avatar-heading").css("opacity", "0");
         fadeOut("#versus");
         $("#howard-cosell").text("YOU WIN!");
         $("#attack-button").attr("disabled", true);
@@ -545,7 +551,7 @@ $(window).ready(function () {
   $("#attack-button").on("click", function () {
     if (defenderMissing === true) {
       $("#howard-cosell").text("There is no enemy to attack.");
-      $("#attack-button").attr("disabled", true);
+      // $("#attack-button").attr("disabled", true);
     } else {
       if (attacks > 0) {
         currentOneAttackPower += playerOne.attackPower;
