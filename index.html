@@ -26,16 +26,16 @@
 
       <h2 class="choose-theme-heading">Choose A Theme</h2>
       <div id="button-array">
-        <button class="theme-btn" id="theme-btn-one">
+        <button class="theme-btn" id="starWars">
           <img src="assets/images/sw-theme-icon.jpg" alt="star wars button">
         </button>
-        <button class="theme-btn" id="theme-btn-two">
+        <button class="theme-btn" id="lotr">
           <img src="assets/images/lotr-theme-icon.jpg" alt="lord of the rings button">
         </button>
-        <button class="theme-btn" id="theme-btn-three">
+        <button class="theme-btn" id="matrix">
           <img src="assets/images/matrix-theme-icon.jpg" alt="the matrix button">
         </button>
-        <button class="theme-btn" id="theme-btn-four">
+        <button class="theme-btn" id="got">
           <img src="assets/images/got-theme-icon.png" alt="game of thrones button">
         </button>
       </div>
@@ -57,7 +57,7 @@
 
       <!-- all avatar boxes will get the class "avatar-box"  and an id of "avatar-one" (two, three, etc.) for moving it around. onClicks should be hooked to the button rather than the div because buttons can be disabled -->
       <div class="avatar-box hidden-beginning" id="avatar-one">
-        <button class="avatar" id="player-one">
+        <button class="avatar" id="player-one" value="0">
           <h3 id="avatar-one-name"></h3>
           <img id="avatar-one-image" src="">
           <h4 id="avatar-one-health"></h4>
@@ -65,7 +65,7 @@
       </div>
 
       <div class="avatar-box hidden-beginning" id="avatar-two">
-        <button class="avatar" id="player-two">
+        <button class="avatar" id="player-two" value="1">
           <h3 id="avatar-two-name"></h3>
           <img id="avatar-two-image" src="">
           <h4 id="avatar-two-health"></h4>
@@ -73,7 +73,7 @@
       </div>
 
       <div class="avatar-box hidden-beginning" id="avatar-three">
-        <button class="avatar" id="player-three">
+        <button class="avatar" id="player-three" value="2">
           <h3 id="avatar-three-name"></h3>
           <img id="avatar-three-image" src="">
           <h4 id="avatar-three-health"></h4>
@@ -81,7 +81,7 @@
       </div>
 
       <div class="avatar-box hidden-beginning" id="avatar-four">
-        <button class="avatar" id="player-four">
+        <button class="avatar" id="player-four" value="3">
           <h3 id="avatar-four-name"></h3>
           <img id="avatar-four-image" src="">
           <h4 id="avatar-four-health"></h4>
@@ -120,8 +120,6 @@
   <audio class="audio" id="tyrion-song" src="assets/audio/gatesOfIstanbul.m4a"></audio>
   <audio class="audio" id="jon-snow-song" src="assets/audio/shadowMagnet.m4a"></audio>
   <audio class="audio" id="hodor-song" src="assets/audio/nadir.m4a"></audio>
-
-  </div>
 
   <script src="assets/js/jquery-3.3.1.js"></script>
   <script src="assets/js/game.js"></script>

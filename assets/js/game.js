@@ -1,5 +1,8 @@
 $(window).ready(function () {
 
+  
+  // Much of this code should really be broken into smaller chunks -  But this is an early project, so I'm leaving it as an example of my learning curve.
+
   var songArray;
   var playerOneFlag = true;
   var playerTwoFlag = true;
@@ -13,7 +16,7 @@ $(window).ready(function () {
   var thirdAvatar;
   var fourthAvatar;
   var playerOne;
-  var playerTwo;  
+  var playerTwo;
   var undefeatedEnemies = 3
   var attacks = 0;
   var currentOneHealth;
@@ -214,6 +217,7 @@ $(window).ready(function () {
   // end THEME OBJECTS
 
   // FADE Functions
+  // I wrote these functions before I knew JQuery already has fade functions
   function fadeOut(p1) {
     $(p1).css("animation", "fadeout 1.2s");
     $(p1).css("opacity", "0");
@@ -335,30 +339,26 @@ $(window).ready(function () {
     $("#avatar-four-image").attr("src", p4.imageLocation);
   }
 
-  // CHOOSE THEME Buttons
-  $("#theme-btn-one").on("click", function () {
-    assignAvatars(starWars.vader, starWars.obiwan, starWars.luke, starWars.porg, starWars.songs);
-    themeChoice(starWars.heading, starWars.backgroundLocation);
+  // CHOOSE THEME Button
+  $(".theme-btn").on("click", function () {
+    if ($(this).attr("id") === "starWars") {
+      assignAvatars(starWars.vader, starWars.obiwan, starWars.luke, starWars.porg, starWars.songs);
+      themeChoice(starWars.heading, starWars.backgroundLocation);
+    } else if ($(this).attr("id") === "lotr") {
+      assignAvatars(lotr.sauron, lotr.gandalf, lotr.frodo, lotr.gollum, lotr.songs);
+      themeChoice(lotr.heading, lotr.backgroundLocation);
+      colorChanges(lotr.h1Typeface, "#c59701", "#000", "6px solid #029aff");
+    } else if ($(this).attr("id") === "matrix") {
+      assignAvatars(matrix.smith, matrix.morpheus, matrix.neo, matrix.trinity, matrix.songs);
+      themeChoice(matrix.heading, matrix.backgroundLocation);
+      colorChanges(matrix.h1Typeface, "#06ac00", "#fff", "6px solid #06ac00");
+    } else {
+      assignAvatars(got.daenerys, got.tyrion, got.snow, got.hodor, got.songs);
+      themeChoice(got.heading, got.backgroundLocation);
+      colorChanges(got.h1Typeface, "#757575", "#000", "6px solid #5d00cf");
+    }
   });
-
-  $("#theme-btn-two").on("click", function () {
-    assignAvatars(lotr.sauron, lotr.gandalf, lotr.frodo, lotr.gollum, lotr.songs);
-    themeChoice(lotr.heading, lotr.backgroundLocation);
-    colorChanges(lotr.h1Typeface, "#c59701", "#000", "6px solid #029aff");
-  });
-
-  $("#theme-btn-three").on("click", function () {
-    assignAvatars(matrix.smith, matrix.morpheus, matrix.neo, matrix.trinity, matrix.songs);
-    themeChoice(matrix.heading, matrix.backgroundLocation);
-    colorChanges(matrix.h1Typeface, "#06ac00", "#fff", "6px solid #06ac00");
-  });
-
-  $("#theme-btn-four").on("click", function () {
-    assignAvatars(got.daenerys, got.tyrion, got.snow, got.hodor, got.songs);
-    themeChoice(got.heading, got.backgroundLocation);
-    colorChanges(got.h1Typeface, "#757575", "#000", "6px solid #5d00cf");
-  });
-  // end CHOOSE THEME Buttons
+  // end CHOOSE THEME Button
 
   // CHOOSE AVATAR Buttons
   $("#player-one").on("click", function () {
